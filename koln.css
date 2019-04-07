@@ -4,38 +4,188 @@ html {
     margin: 0;
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
+    scroll-snap-type: y mandatory;
 }
 
-.background_initial {
+/* ANIMAÇÃO - COVER - TITLE */
+    .title-text{
+        overflow: hidden;
+        /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange;
+        /* The typwriter cursor */
+        white-space: nowrap;
+        /* Keeps the content on a single line */
+        margin: 0 auto;
+        /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em;
+        /* Adjust as needed */
+        animation:
+            typing 2.5s steps(60, end),
+            blink-caret .75s step-end infinite;
+        
+        position: absolute;
+        left: 30%;
+        top: 10%;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        padding: 18px;
+        font-size: 50px;
+    }
+
+    /* The typing effect */
+    @keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 35%
+        }
+    }
+
+    /* The typewriter cursor effect */
+    @keyframes blink-caret {
+
+        from,
+        to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: orange;
+        }
+    }
+
+/* COVER */
+    .background_initial {
+        background-image: url("imgs/koln_bg.jpg");
+        min-height: 100%;
+        position: relative;
+        opacity: 1;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        scroll-snap-align: bottom;
+        imgs/background1mg-2
+    }
+
+/*ABSTRACT*/
+.paragraph1 {
+    color: #777;
+    background-color: whitesmoke;
+    text-align:center;
+    padding:50px 80px;
+    text-align: justify;
+    scroll-snap-align: start;
+
+}
+
+.background_middle {
     background-image: url("imgs/background1.jpg");
-    min-height: 100%;
+    min-height: 50%;
     position: relative;
-    opacity: 0.8;
+    margin-top: 3.5%;
+    opacity: 0.7;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: scroll;
+    scroll-snap-align: start;
 
-    imgs/background1mg-2
 }
 
-.title-text {
-    position: absolute;
-    left: 20%;
-    top: 20%;
-    width: 100%;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    padding: 18px;
-    font-size: 50px;
-    letter-spacing: 10px;
+/*MOTIVAÇÃO*/
+    .background_bottom {
+        background-image: url("imgs/koln1.jpg");
+        min-height: 50%;
+        position: relative;
+        opacity: 0.7;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        scroll-snap-align: start;
+    }
+
+    .paragraph2 {
+        color: #777;
+        background-color: whitesmoke;
+        text-align: center;
+        padding: 50px 80px;
+        text-align: justify;
+        scroll-snap-align: start;
+    }
+/* MENU */
+    .menu{
+        position: absolute;
+        width: 100%;
+        background-color: rgba(255, 115, 0, 0.801);
+        opacity: 0.8;
+        text-align: center;
+        scroll-snap-align: start;
+
+
+    }
+    .menu:hover{
+        opacity: 1;
+    }
+    .menu li{
+        display: inline;
+    }
+
+    .menu li a{
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+.menu li a:hover{
+    color: black;
 }
 
-.paragraph1 {
-    color: #777;
-    background-color:white;
-    text-align:center;
-    padding:50px 80px;
-    text-align: justify;
-}
+/* RODAPÉ */
+    .rodape {
+        color: #777;
+        background-color: white;
+        text-align: center;
+        padding: 50px 80px;
+        text-align: justify;
+
+        scroll-snap-align: start;
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+
+    .rodape li {
+        display: block;
+    }
+
+    .rodape li a {
+        text-decoration: none;
+    }
+
+    .rodape li a:hover {
+        text-decoration: none;
+        color: red;
+    }
+/* CAPTION */
+
+    .caption {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+    }
+
+    .caption span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
