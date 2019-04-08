@@ -15,6 +15,14 @@ h3 {
     text-align: center;
 }
 
+h1 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 40px "Lato", sans-serif;
+    color: white;
+    text-align: center;
+}
+
 /* BACKGROUND - COVER */
     .background_initial {
         background-image: url("../../imgs/curiosities1.jpg");
