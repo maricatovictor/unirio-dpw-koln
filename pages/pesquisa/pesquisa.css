@@ -18,7 +18,7 @@ h3 {
 /* COVER - TITLE */
 
     .background_initial {
-        background-image: url("/../imgs/research.png");
+        background-image: url("../../imgs/research.png");
         min-height: 90%;
         position: relative;
         opacity: 1;
