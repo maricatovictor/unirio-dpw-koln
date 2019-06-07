@@ -9,11 +9,14 @@ html {
 h1 {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font: 40px "Lato", sans-serif;
-    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: red;
     text-align: center;
 }
-
+h2{
+    color: blue;
+    font: 40px "Courier New", sans-serif;
+}
 /* ANIMAÇÃO - COVER - TITLE */
     .title-text{
         overflow: hidden;
